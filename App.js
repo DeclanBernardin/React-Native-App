@@ -4,9 +4,9 @@ import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 export default function App() {
   
   return (
-    <View style={{padding: 50}}>
-      <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
-      <TextInput placeholder="Type Here" style={{width: '50%', borderBottomColor: 'black', borderBottomWidth: 1}}/>
+    <View style={styles.screen}>
+      <View style={styles.inputContainer}>
+      <TextInput placeholder="Type Here" style={styles.input}/>
       <Button title="Push Me"/>
       </View>
       <View>
@@ -15,5 +15,21 @@ export default function App() {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  screen:{
+    padding: 50
+  },
+  inputContainer: {
+    flexDirection: 'row',
+    justifyContent:'space-between',
+    alignItems: 'center'
+  },
+  input: {
+    width: '50%', 
+    borderBottomColor: 'black', 
+    borderBottomWidth: 1
+  }
+});
 
 
